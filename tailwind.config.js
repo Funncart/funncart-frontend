@@ -3,16 +3,36 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './clients/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+      },
+      colors: {
+        primary: '#111827',
+        secondary: '#ffffff',
+        black: '#121212',
+        gray: {
+          DEFAULT: '#F6F6F6',
+        },
+        heading: '#121212',
+        body: '#3E3E3E',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: 0,
+          // sm: '2rem',
+          // lg: '4rem',
+          // xl: '5rem',
+          // '2xl': '6rem',
+        },
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require('@tailwindcss/forms')],
+};
