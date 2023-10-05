@@ -130,57 +130,81 @@ export default function Cart(props) {
                           </ul>
                         </div>
                       </div>
+                      {
+                        items.length === 0 &&
+                        <div className='flex flex-col items-center justify-center h-4/5'>
+                          <img 
+                            src='/assets/images/shopping-cart.png'
+                            alt='shopping cart'
+                            className='block w-12 h-12'
+                          />
+                          <p className='mt-4 text-lg font-bold'>
+                            No items added to your cart
+                          </p>
+                          <Link
+                            href={'/shop-now'}
+                            type="button"
+                            className="px-6 py-3 mt-4 font-medium text-white bg-black rounded-lg"
+                          >
+                            Continue Shopping
+                          </Link>
+                        </div>
+                      }
                     </div>
 
+
+                   { 
+                    items.length > 0 &&
                     <div className="px-4 py-6 border-t border-gray-200 sm:px-6">
-                      <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Subtotal</p>
-                        <p>{cartTotal.toFixed(2)}</p>
-                      </div>
-                      <p className="mt-0.5 text-sm text-gray-500">
-                        Delivery fee will be added on checkout.
-                      </p>
-                      <div className="mt-6">
-                        <Link
-                          href="/checkout"
-                          className="flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md shadow-xl hover:shadow-none"
-                          style={{
-                            backgroundImage: items.length
-                              ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
-                              : '',
-                            backgroundSize: '200% auto',
-                            color: 'white',
-                            borderRadius: '10px',
-                            backgroundColor: items.length ? '' : 'gray',
-                          }}
-                          onMouseEnter={(e) =>
-                            (e.target.style.backgroundPosition = 'right center')
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.backgroundPosition = 'left center')
-                          }
-                          onClick={closeModal}
-                        >
-                          Checkout
+                        <div className="flex justify-between text-base font-medium text-gray-900">
+                          <p>Subtotal</p>
+                          <p>{cartTotal.toFixed(2)}</p>
+                        </div>
+                        <p className="mt-0.5 text-sm text-gray-500">
+                          Delivery fee will be added on checkout.
+                        </p>
+                        <div className="mt-6">
+                          <Link
+                            href="/checkout"
+                            className="flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md shadow-xl hover:shadow-none"
+                            style={{
+                              backgroundImage: items.length
+                                ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
+                                : '',
+                              backgroundSize: '200% auto',
+                              color: 'white',
+                              borderRadius: '10px',
+                              backgroundColor: items.length ? '' : 'gray',
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundPosition = 'right center')
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundPosition = 'left center')
+                            }
+                            onClick={closeModal}
+                          >
+                            Checkout
+                          </Link>
+                        </div>
+
+                        <Link href={'/shop-now'}>
+                          <div className="flex justify-center mt-6 text-center text-gray-500 gap-x-4 text-md">
+                            <p>
+                              or
+                              <button
+                                type="button"
+                                className="ml-2 font-medium text-[#FD5900] hover:text-[#ff8f53]"
+                                onClick={closeModal}
+                              >
+                                Continue Shopping
+                                <span aria-hidden="true"> &rarr;</span>
+                              </button>
+                            </p>
+                          </div>
                         </Link>
                       </div>
-
-                      <Link href={'/shop-now'}>
-                        <div className="flex justify-center mt-6 text-center text-gray-500 gap-x-4 text-md">
-                          <p>
-                            or
-                            <button
-                              type="button"
-                              className="ml-2 font-medium text-[#FD5900] hover:text-[#ff8f53]"
-                              onClick={closeModal}
-                            >
-                              Continue Shopping
-                              <span aria-hidden="true"> &rarr;</span>
-                            </button>
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+                    }
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
