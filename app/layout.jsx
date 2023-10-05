@@ -8,7 +8,7 @@ import { Animator, Banner, Footer, Navbar } from '@/components/Shared';
 import './globals.css';
 import { Suspense } from 'react';
 
-export const metadata = {
+const metadata = {
   title: 'Funncart | A market place for handmade products',
   description: 'A market place for handmade products',
 };
@@ -16,6 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         <Suspense>
           <CartProvider>
