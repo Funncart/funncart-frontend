@@ -11,7 +11,7 @@ export default function HeroSection() {
     <div className="container pb-24 pt-28">
       <div className="text-center">
         <h1 className="text-4xl font-semibold text-heading sm:text-6xl">
-          Crafted in <Flag country={'Pakistan'} /> for the 🌍
+          Crafted in <Flag country={'Pakistan'} /> for the <Flag country={'World'} />
         </h1>
         <p className="max-w-2xl mx-auto mt-6 text-2xl leading-10 tracking-wide text-gray-600">
           We showcase and sell authentic art and handicrafts crafted by
