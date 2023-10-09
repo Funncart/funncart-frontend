@@ -2,7 +2,7 @@
 import { useProduct } from '@/lib/hooks';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { useCart } from 'react-use-cart';
-import { Disclosure, RadioGroup, Tab } from '@headlessui/react';
+import { Disclosure, Tab } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
@@ -11,13 +11,12 @@ function classNames(...classes) {
 }
 
 export default function ProductDescription({ productSlug }) {
+  const { addItem } = useCart();
   const { product } = useProduct(productSlug);
   const [variant, setVariant] = useState(product?.product_variants[0]);
   const [colorVariants] = useState(
     product.product_variants.filter((variant) => variant.title === 'color'),
   );
-    console.log(product);
-  const { addItem } = useCart();
 
   return (
     <div className="bg-white mt-14 md:mt-20 font-jakarta">
