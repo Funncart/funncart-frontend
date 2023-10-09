@@ -60,24 +60,22 @@ export default function CheckoutProducts(props) {
                     <label htmlFor="quantity" className="sr-only">
                       Quantity
                     </label>
-                    <select
+                    <input
                       id="quantity"
                       name="quantity"
+                      type="number"
                       value={product.quantity}
-                      onChange={(e) =>
-                        updateItemQuantity(product.id, e.target.value)
-                      }
-                      className="text-base font-medium text-left text-gray-700 border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
-                    >
-                      <option value={1}>1</option>
-                      <option value={2}>2</option>
-                      <option value={3}>3</option>
-                      <option value={4}>4</option>
-                      <option value={5}>5</option>
-                      <option value={6}>6</option>
-                      <option value={7}>7</option>
-                      <option value={8}>8</option>
-                    </select>
+                      onChange={(e) => {
+                        if (+e.target.value >= product.total) {
+                          alert("value exceeded");
+                        }
+                        else updateItemQuantity(
+                          product.id,
+                          +e.target.value,
+                        )
+                      }}
+                      className="w-20 text-base font-medium text-left text-gray-700 border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                    />
                   </div>
                 </div>
               </div>
