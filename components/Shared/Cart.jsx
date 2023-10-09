@@ -140,13 +140,13 @@ export default function Cart(props) {
                           <p className="mt-4 text-lg font-bold">
                             No items added to your cart
                           </p>
-                          <Link
-                            href={'/shop-now'}
+                          <button
+                            onClick={closeModal}
                             type="button"
                             className="px-6 py-3 mt-4 font-medium text-white bg-black rounded-lg"
                           >
                             Continue Shopping
-                          </Link>
+                          </button>
                         </div>
                       )}
                     </div>
