@@ -9,12 +9,10 @@ export default function SellerProfile({ sellerId }) {
     <div className="container relative">
       {/* Cover Photo */}
       <div className="w-full h-58">
-        <img
-          src="/assets/images/cover.png"
-          width={100}
-          height={100}
+        <div
+          style={{backgroundImage: `url(${seller.media[1].original_url?? "/assets/images/cover.png"})`}}
           alt="cover"
-          className="w-full h-64 rounded-3xl"
+          className="h-64 bg-center bg-cover rounded-3xl"
         />
       </div>
       {/* Profile Photo, Name, and Description */}
@@ -30,9 +28,9 @@ export default function SellerProfile({ sellerId }) {
       <div className="max-w-4xl p-4 mx-auto mt-36">
         <div className="mt-4 text-center">
           <h1 className="text-4xl font-semibold text-heading">{seller.name}</h1>
-          <p className="mt-3 text-2xl text-body">
+          {/* <p className="mt-3 text-2xl text-body">
             One liner description of the seller products
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

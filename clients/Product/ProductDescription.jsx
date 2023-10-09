@@ -130,7 +130,7 @@ export default function ProductDescription({ productSlug }) {
               />
             </div>
 
-            {product.is_customizable && (
+            {!!product.is_customizable && (
               <div className="mt-6">
                 <h3 className="sr-only">Customization</h3>
                 <div className="flex items-center">
