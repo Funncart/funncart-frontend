@@ -114,7 +114,7 @@ export default function ProductReviews({ productSlug }) {
               Share your thoughts
             </h3>
             <p className="mt-1 text-sm text-gray-600">
-              If you’ve used this product, share your feedback with us on
+              If you&apos;ve used this product, share your feedback with us on
               Instagram
             </p>
 

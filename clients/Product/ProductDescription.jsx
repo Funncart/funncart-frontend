@@ -91,8 +91,8 @@ export default function ProductDescription({ productSlug }) {
                     <StarIcon
                       key={rating}
                       className={classNames(
-                        product.rating > rating
-                          ? 'text-orange-500'
+                        Math.floor(Math.random() * 5 + 3) > rating
+                          ? 'text-yellow-400'
                           : 'text-gray-300',
                         'h-5 w-5 flex-shrink-0',
                       )}
@@ -130,22 +130,20 @@ export default function ProductDescription({ productSlug }) {
               />
             </div>
 
-            {
-              product.is_customizable && (
-                <div className="mt-6">
-                  <h3 className="sr-only">Customization</h3>
-                  <div className="flex items-center">
-                    <a
-                      href={product.customization_link}
-                      target="_blank"
-                      className="text-base font-medium text-gray-900 underline"
-                    >
-                      Customize this product
-                    </a>
-                  </div>
+            {product.is_customizable && (
+              <div className="mt-6">
+                <h3 className="sr-only">Customization</h3>
+                <div className="flex items-center">
+                  <a
+                    href={product.customization_link}
+                    target="_blank"
+                    className="text-base font-medium text-gray-900 underline"
+                  >
+                    Customize this product
+                  </a>
                 </div>
-              )
-            }
+              </div>
+            )}
 
             <section aria-labelledby="details-heading" className="mt-12">
               <h2 id="details-heading" className="sr-only">
@@ -224,6 +222,7 @@ export default function ProductDescription({ productSlug }) {
                     addItem({
                       ...variant,
                       product_id: product.id,
+                      slug: product.slug,
                       name: product.name,
                     });
                   }}

@@ -7,7 +7,6 @@ import { useCart } from 'react-use-cart';
 
 export default function Cart(props) {
   const { items, removeItem, updateItemQuantity, cartTotal } = useCart();
-
   const [open, setOpen] = useState(props.cartClick);
   useEffect(() => {
     setOpen(props.cartClick);
@@ -107,7 +106,7 @@ export default function Cart(props) {
                                         onChange={(e) =>
                                           updateItemQuantity(
                                             product.id,
-                                            e.target.value,
+                                            +e.target.value,
                                           )
                                         }
                                         min={1}
@@ -141,9 +140,23 @@ export default function Cart(props) {
                             No items added to your cart
                           </p>
                           <button
+                            className="flex items-center justify-center max-w-xs px-8 py-3 mt-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+                            style={{
+                              backgroundImage:
+                                'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)',
+                              backgroundSize: '200% auto',
+                              color: 'white',
+                              borderRadius: '10px',
+                            }}
+                            onMouseEnter={(e) =>
+                              (e.target.style.backgroundPosition =
+                                'right center')
+                            }
+                            onMouseLeave={(e) =>
+                              (e.target.style.backgroundPosition =
+                                'left center')
+                            }
                             onClick={closeModal}
-                            type="button"
-                            className="px-6 py-3 mt-4 font-medium text-white bg-black rounded-lg"
                           >
                             Continue Shopping
                           </button>

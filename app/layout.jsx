@@ -7,6 +7,8 @@ const CartProvider = dynamic(
 import { Animator, Banner, Footer, Navbar } from '@/components/Shared';
 import './globals.css';
 import { Suspense } from 'react';
+import { WhatsappIcon } from '@/components/Assets/Icons';
+import { PHONE_NO } from '@/constants/contact';
 
 const metadata = {
   title: 'Funncart | A market place for handmade products',
@@ -30,6 +32,11 @@ export default function RootLayout({ children }) {
               <Banner />
               <Navbar />
               {children}
+              <div className="fixed bottom-8 right-8">
+                <a href={`https://wa.me/${PHONE_NO}`} target="_blank">
+                  <WhatsappIcon />
+                </a>
+              </div>
               <Footer />
             </Animator>
           </CartProvider>

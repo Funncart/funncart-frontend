@@ -18,7 +18,7 @@ export default function PopularCategories() {
           id="category-heading"
           className="text-2xl font-bold tracking-tight text-heading"
         >
-          Popular Sellers
+          Popular Categories
         </h2>
         <a
           href="/categories"
