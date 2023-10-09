@@ -10,7 +10,11 @@ export default function SellerProfile({ sellerId }) {
       {/* Cover Photo */}
       <div className="w-full h-58">
         <div
-          style={{backgroundImage: `url(${seller.media[1].original_url?? "/assets/images/cover.png"})`}}
+          style={{
+            backgroundImage: `url(${
+              seller.media[1].original_url ?? '/assets/images/cover.png'
+            })`,
+          }}
           alt="cover"
           className="h-64 bg-center bg-cover rounded-3xl"
         />

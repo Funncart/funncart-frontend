@@ -224,7 +224,7 @@ export default function ProductDescription({ productSlug }) {
                       product_id: product.id,
                       slug: product.slug,
                       name: product.name,
-                      total: variant.qty
+                      total: variant.qty,
                     });
                   }}
                   disabled={!product.product_variants_sum_qty}

@@ -104,14 +104,16 @@ export default function Cart(props) {
                                         className="w-16 h-8 pl-2 text-sm text-center border border-gray-300 rounded-md"
                                         defaultValue={product.quantity}
                                         onChange={(e) => {
-                                          if (+e.target.value >= product.total) {
-                                            alert("value exceeded");
+                                          if (
+                                            +e.target.value >= product.total
+                                          ) {
+                                            alert('value exceeded');
                                             e.target.value = 1;
-                                          }
-                                          else updateItemQuantity(
-                                            product.id,
-                                            +e.target.value,
-                                          )
+                                          } else
+                                            updateItemQuantity(
+                                              product.id,
+                                              +e.target.value,
+                                            );
                                         }}
                                         min={1}
                                       />
