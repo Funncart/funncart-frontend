@@ -16,7 +16,7 @@ export default function ProductDescription({ productSlug }) {
   const [colorVariants] = useState(
     product.product_variants.filter((variant) => variant.title === 'color'),
   );
-
+    console.log(product);
   const { addItem } = useCart();
 
   return (
@@ -130,6 +130,23 @@ export default function ProductDescription({ productSlug }) {
                 dangerouslySetInnerHTML={{ __html: product.description }}
               />
             </div>
+
+            {
+              product.is_customizable && (
+                <div className="mt-6">
+                  <h3 className="sr-only">Customization</h3>
+                  <div className="flex items-center">
+                    <a
+                      href={product.customization_link}
+                      target="_blank"
+                      className="text-base font-medium text-gray-900 underline"
+                    >
+                      Customize this product
+                    </a>
+                  </div>
+                </div>
+              )
+            }
 
             <section aria-labelledby="details-heading" className="mt-12">
               <h2 id="details-heading" className="sr-only">
