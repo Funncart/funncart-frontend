@@ -11,9 +11,9 @@ export default function Flag({ country }) {
 }
 
 const Pakistan = () => {
-  return <img src='/assets/icons/pak.svg' className='inline h-16'/>;
+  return <img src="/assets/icons/pak.svg" className="inline h-16" />;
 };
 
 const World = () => {
-  return <img src='/assets/icons/world.svg' className='inline h-14'/>;
+  return <img src="/assets/icons/world.svg" className="inline h-14" />;
 };

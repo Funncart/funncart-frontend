@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
@@ -130,15 +130,14 @@ export default function Cart(props) {
                           </ul>
                         </div>
                       </div>
-                      {
-                        items.length === 0 &&
-                        <div className='flex flex-col items-center justify-center h-4/5'>
-                          <img 
-                            src='/assets/images/shopping-cart.png'
-                            alt='shopping cart'
-                            className='block w-12 h-12'
+                      {items.length === 0 && (
+                        <div className="flex flex-col items-center justify-center h-4/5">
+                          <img
+                            src="/assets/images/shopping-cart.png"
+                            alt="shopping cart"
+                            className="block w-12 h-12"
                           />
-                          <p className='mt-4 text-lg font-bold'>
+                          <p className="mt-4 text-lg font-bold">
                             No items added to your cart
                           </p>
                           <Link
@@ -149,13 +148,11 @@ export default function Cart(props) {
                             Continue Shopping
                           </Link>
                         </div>
-                      }
+                      )}
                     </div>
 
-
-                   { 
-                    items.length > 0 &&
-                    <div className="px-4 py-6 border-t border-gray-200 sm:px-6">
+                    {items.length > 0 && (
+                      <div className="px-4 py-6 border-t border-gray-200 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <p>Subtotal</p>
                           <p>{cartTotal.toFixed(2)}</p>
@@ -177,10 +174,12 @@ export default function Cart(props) {
                               backgroundColor: items.length ? '' : 'gray',
                             }}
                             onMouseEnter={(e) =>
-                              (e.target.style.backgroundPosition = 'right center')
+                              (e.target.style.backgroundPosition =
+                                'right center')
                             }
                             onMouseLeave={(e) =>
-                              (e.target.style.backgroundPosition = 'left center')
+                              (e.target.style.backgroundPosition =
+                                'left center')
                             }
                             onClick={closeModal}
                           >
@@ -204,7 +203,7 @@ export default function Cart(props) {
                           </div>
                         </Link>
                       </div>
-                    }
+                    )}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
