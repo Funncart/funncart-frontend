@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <div className="container pb-24 pt-28">
       <div className="text-center">
-        <h1 className="flex items-center justify-center text-4xl font-semibold gap-x-2 text-heading sm:text-6xl">
+        <h1 className="flex flex-wrap items-center justify-center text-4xl font-semibold gap-x-2 text-heading sm:text-6xl">
           Crafted in <Flag country={'Pakistan'} /> for the{' '}
           <Flag country={'World'} />
         </h1>
