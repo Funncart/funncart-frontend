@@ -14,7 +14,7 @@ export default function SocialMedia() {
 
   return (
     <div className="container relative pt-12 pb-20 rounded-3xl">
-      <Heading title="Social Media" description="Words by our customers" />
+      <Heading title="Social Media" description="Our Social Presence" />
       <div
         ref={scrollRef}
         className="relative flex overflow-x-auto overflow-y-hidden select-none hide-scrollbar shrink-0 md:grid-cols-4 rounded-2xl"
@@ -60,11 +60,11 @@ export default function SocialMedia() {
       </div>
       <div className="absolute flex items-center justify-center transform -translate-x-1/2 translate-y-full bottom-60 left-1/2">
         <a
-          className="flex items-center px-6 py-4 text-xl font-semibold bg-white rounded-lg shadow-lg jutify-center gap-x-4"
+          className="flex items-center px-6 py-4 text-xl font-semibold bg-white rounded-lg shadow-lg jutify-center gap-x-2"
           href={INSTAGRAM_HANDLE}
         >
           <InstagramIcon />
-          <span>Funncartstore</span>
+          <span className="text-lg font-medium">Funncartstore</span>
         </a>
       </div>
     </div>
