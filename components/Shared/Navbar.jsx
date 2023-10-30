@@ -63,7 +63,7 @@ export default function Navbar() {
             </ul>
             <div className="">
               <button
-                className="flex text-2xl font-medium gap-x-2"
+                className="flex text-xl font-medium gap-x-2"
                 onClick={() => setCartClick(true)}
               >
                 <BagIcon />
@@ -82,7 +82,7 @@ export default function Navbar() {
                   ))}
                 </ul>
                 <button
-                  className="flex px-8 py-4 text-2xl font-medium gap-x-2 md:hidden bg-gray"
+                  className="flex px-8 py-4 text-3xl font-medium md:hidden bg-gray"
                   onClick={() => setCartClick(true)}
                 >
                   <BagIcon />
