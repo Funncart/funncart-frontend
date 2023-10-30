@@ -23,7 +23,7 @@ export default function Contact() {
               Do you have a question or complain? contact us now
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div className="flex gap-x-4">
+              {/* <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <CheckCircleIcon
@@ -32,7 +32,7 @@ export default function Contact() {
                   />
                 </dt>
                 <dd>{ADDRESS}</dd>
-              </div>
+              </div> */}
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
