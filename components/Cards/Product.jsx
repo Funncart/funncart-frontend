@@ -27,7 +27,7 @@ export default function Product({
           <img
             src={media[0]?.original_url}
             alt={name}
-            className="object-cover object-center w-full h-full group-hover:opacity-75"
+            className="object-cover object-center w-full h-full aspect-square group-hover:opacity-75"
           />
         </div>
         <div className="pt-4 pb-2 text-center">

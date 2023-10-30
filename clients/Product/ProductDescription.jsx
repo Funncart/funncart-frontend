@@ -62,7 +62,7 @@ export default function ProductDescription({ productSlug }) {
                   <img
                     src={image.original_url}
                     alt={image.alt}
-                    className="object-cover object-center w-full h-full sm:rounded-lg"
+                    className="object-cover object-center w-full h-full aspect-square sm:rounded-lg"
                   />
                 </Tab.Panel>
               ))}

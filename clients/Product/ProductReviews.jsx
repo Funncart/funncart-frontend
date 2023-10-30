@@ -109,7 +109,7 @@ export default function ProductReviews({ productSlug }) {
             </dl>
           </div>
 
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <h3 className="text-lg text-gray-900 f ont-medium">
               Share your thoughts
             </h3>
@@ -121,7 +121,7 @@ export default function ProductReviews({ productSlug }) {
             <p className="inline-flex items-center justify-center w-full px-8 py-2 mt-6 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50 sm:w-auto lg:w-full">
               Write a review
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0">
