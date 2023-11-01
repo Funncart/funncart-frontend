@@ -33,11 +33,13 @@ export default function PopularSellers() {
         {sellers.data.map((seller) => (
           <li key={seller.name}>
             <Link href={`sellers/${seller.id}/products`}>
-              {/* <img
-                className="w-24 h-24 mx-auto rounded-full"
-                src={seller.media[0].original_url}
-                alt=""
-              /> */}
+              {seller.media.length != 0 && (
+                <img
+                  className="w-24 h-24 mx-auto rounded-full"
+                  src={seller.media[0].original_url}
+                  alt=""
+                />
+              )}
               <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-heading">
                 {seller.name}
               </h3>

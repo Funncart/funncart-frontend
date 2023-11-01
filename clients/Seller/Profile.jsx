@@ -12,7 +12,7 @@ export default function SellerProfile({ sellerId }) {
         <div
           style={{
             backgroundImage: `url(${
-              seller.media[1].original_url ?? '/assets/images/cover.png'
+              seller.media[1]?.original_url ?? '/assets/images/cover.png'
             })`,
           }}
           alt="cover"
@@ -22,7 +22,7 @@ export default function SellerProfile({ sellerId }) {
       {/* Profile Photo, Name, and Description */}
       <div className="flex justify-center">
         <img
-          src={seller.media[0].original_url} // Replace with your actual profile photo URL
+          src={seller.media[0]?.original_url} // Replace with your actual profile photo URL
           alt="Profile"
           height={250}
           width={250}
