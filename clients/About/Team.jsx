@@ -12,7 +12,7 @@ export default function Team() {
         {PEOPLE.map((person) => (
           <li
             key={person.name}
-            className="flex flex-col px-6 py-4 shadow-2xl rounded-2xl"
+            className="flex flex-col px-6 py-4 shadow-md rounded-2xl"
           >
             <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden">
               <img
@@ -45,7 +45,7 @@ export default function Team() {
                   </svg>
                 </a>
               </div>
-              <p className="mt-1 text-base leading-7 text-gray-600">
+              <p className=" text-base leading-7 text-gray-600">
                 {person.role}
               </p>
             </div>

@@ -19,8 +19,8 @@ export default function ProductDescription({ productSlug }) {
   );
 
   return (
-    <div className="bg-white mt-14 md:mt-20 font-jakarta">
-      <div className="max-w-2xl px-4 py-16 mx-auto sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div className="bg-white mt-4 md:mt-4 font-jakarta">
+      <div className="max-w-2xl px-4 pt-20 mx-auto sm:px-6 sm:pt-20 lg:max-w-7xl lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           {/* Image gallery */}
           <Tab.Group as="div" className="flex flex-col-reverse">

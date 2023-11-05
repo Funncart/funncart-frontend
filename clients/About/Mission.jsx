@@ -25,7 +25,7 @@ export default function Mission() {
     <div className="container mt-16 mb-32">
       <div className="flex flex-col items-center pb-20 text-center gap-y-8">
         <Image
-          src="/assets/images/about.png"
+          src="/assets/images/aboutus.png"
           height={320}
           width={500}
           alt="about"
