@@ -36,7 +36,7 @@ const FOOTER_ITEMS = [
 export default function Footer() {
   return (
     <footer className="mt-20 md:container md:mb-10">
-      <div className="bg-gray md:rounded-2xl">
+      <div className="bg-gray-50 md:rounded-2xl">
         <div className="flex flex-col justify-between gap-12 p-8 md:flex-row">
           <div className="max-w-sm">
             <Link href="/">

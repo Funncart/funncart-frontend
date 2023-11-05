@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="md:container md:my-5">
-        <div className="bg-gray md:rounded-2xl">
+        <div className="bg-gray-50 md:rounded-2xl">
           <div className="flex items-center justify-between px-8 py-4">
             <div className="flex md:hidden">
               <button

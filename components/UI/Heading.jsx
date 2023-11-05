@@ -1,6 +1,6 @@
 export default function Heading({ title, description }) {
   return (
-    <div className="flex flex-col items-center justify-center pb-14">
+    <div className="flex  flex-col items-center justify-center pb-14">
       <h1 className="text-sm font-medium text-center uppercase text-body">
         {title}
       </h1>
