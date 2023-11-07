@@ -2,10 +2,11 @@
 import Link from 'next/link';
 import { BagIcon, Logo } from '../Assets/Icons';
 import { Bars3Icon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import Cart from './Cart';
 import { useCart } from 'react-use-cart';
+import { usePathname } from 'next/navigation';
 
 const NAVBAR_ITEMS = [
   {
@@ -30,7 +31,14 @@ export default function Navbar() {
   const [showItems, setShowItems] = useState(false);
   const [cartClick, setCartClick] = useState(false);
   const { totalUniqueItems } = useCart();
+  const pathname = usePathname();
 
+  useEffect(() => {
+    document.body.style.overflow = 'auto';
+    setShowItems(false);
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   return (
     <>
       <nav className="md:container md:my-5">
@@ -81,13 +89,6 @@ export default function Navbar() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className="flex px-8 py-4 text-3xl font-medium md:hidden bg-gray"
-                  onClick={() => setCartClick(true)}
-                >
-                  <BagIcon />
-                  <span className="">{totalUniqueItems}</span>
-                </button>
               </div>
             </div>
           )}
