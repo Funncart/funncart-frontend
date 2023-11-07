@@ -54,7 +54,7 @@ export default function Testimonials() {
       <Heading title="Testimonials" description="Words by our customers" />
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto select-none hide-scrollbar shrink-0 md:gap-6 lg:gap-10 md:grid-cols-4"
+        className="px-8 flex gap-4 overflow-x-auto select-none hide-scrollbar shrink-0 md:gap-6 lg:gap-10 "
         onMouseDown={() => setClicked(true)}
         onMouseUp={() => setClicked(false)}
         onMouseLeave={() => setClicked(false)}
