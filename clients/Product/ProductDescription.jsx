@@ -19,7 +19,7 @@ export default function ProductDescription({ productSlug }) {
   );
 
   return (
-    <div className="bg-white mt-4 md:mt-4 font-jakarta">
+    <div className="mt-4 bg-white md:mt-4 font-jakarta">
       <div className="max-w-2xl px-4 pt-20 mx-auto sm:px-6 sm:pt-20 lg:max-w-7xl lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           {/* Image gallery */}
@@ -77,7 +77,7 @@ export default function ProductDescription({ productSlug }) {
 
             <div className="mt-3">
               <h2 className="sr-only">Product information</h2>
-              <p className="text-2xl font-medium tracking-tight text-gray-900">
+              <p className="text-2xl font-medium tracking-tight text-gray-900 price">
                 {variant.price}
               </p>
             </div>

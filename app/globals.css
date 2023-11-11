@@ -167,3 +167,7 @@ ke-y-animation {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.price::before {
+  content: 'Rs: ';
+}

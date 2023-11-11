@@ -32,7 +32,7 @@ export default function Product({
         </div>
         <div className="pt-4 pb-2 text-center">
           <h3 className="text-sm font-medium text-gray-900">{name}</h3>
-          <p className="mt-2 text-base font-medium text-gray-900">
+          <p className="mt-2 text-base font-medium text-gray-900 price">
             {product_variants?.[0]?.price}
           </p>
         </div>
