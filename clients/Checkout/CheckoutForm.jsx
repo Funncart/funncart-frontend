@@ -258,7 +258,12 @@ export default function CheckoutForm({ register, errors }) {
             ))}
           </div>
           {SelectedDeliveryMethod == 'online' && (
-            <p className="py-6">OUR PAYMENT DETAILS TO BE SHOWN</p>
+            <p className="py-6">
+            <strong>Jazzcash: </strong> 0334-3866227<br/>
+             <strong>Easypaisa: </strong> 0334-3866227<br/>
+             <strong>Allied bank: </strong> 04190010063543230010
+            </p>
+
           )}
         </fieldset>
       </div>
