@@ -4,6 +4,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useCart } from 'react-use-cart';
+import toast from 'react-hot-toast';
 
 export default function Cart(props) {
   const { items, removeItem, updateItemQuantity, cartTotal } = useCart();
@@ -107,8 +108,8 @@ export default function Cart(props) {
                                           if (
                                             +e.target.value > product.total
                                           ) {
-                                            alert('Sorry we have a limited items of this product');
-                                            e.target.value = 1;
+                                            toast.error('Sorry we have a limited items of this product');
+                                            e.target.value = product.quantity;
                                           } else
                                             updateItemQuantity(
                                               product.id,
