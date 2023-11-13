@@ -18,13 +18,13 @@ export default function OrderSuccess() {
   }, [emptyCart]);
 
   return (
-    <>
+    <div className='container'>
       <main className="relative mt-16 lg:min-h-full md:mt-24">
-        <div className="overflow-hidden h-80 lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12">
+        <div className="overflow-hidden h-80 lg:absolute  rounded-xl lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12">
           <img
-            src="https://tailwindui.com/img/ecommerce-images/confirmation-page-06-hero.jpg"
+            src="/assets/images/success.jpg"
             alt="TODO"
-            className="object-cover object-center w-full h-full"
+            className="object-cover object-center rounded-2xl w-full h-full border-2 border-red-50"
           />
         </div>
 
@@ -147,6 +147,6 @@ export default function OrderSuccess() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }

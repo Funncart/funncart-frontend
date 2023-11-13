@@ -107,7 +107,7 @@ export default function Cart(props) {
                                           if (
                                             +e.target.value > product.total
                                           ) {
-                                            alert('value exceeded');
+                                            alert('Sorry we have a limited items of this product');
                                             e.target.value = 1;
                                           } else
                                             updateItemQuantity(
