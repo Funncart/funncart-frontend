@@ -5,6 +5,7 @@ import { useCart } from 'react-use-cart';
 import { Disclosure, Tab } from '@headlessui/react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -228,6 +229,7 @@ export default function ProductDescription({ productSlug }) {
                       name: product.name,
                       total: variant.qty,
                     });
+                    toast.success('Product added to cart');
                   }}
                   // or product has already been added to cart
                   disabled={!product.product_variants_sum_qty || isProductAdded}

@@ -1,5 +1,7 @@
 'use client';
 import dynamic from 'next/dynamic';
+import { Toaster } from 'react-hot-toast';
+
 const CartProvider = dynamic(
   () => import('react-use-cart').then((mod) => mod.CartProvider),
   { ssr: false },
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
             <Animator>
               <Banner />
               <Navbar />
+              <Toaster />
               {children}
               <div className="fixed bottom-8 right-8">
                 <a href={`https://wa.me/${PHONE_NO}`} target="_blank">
