@@ -11,13 +11,15 @@ function classNames(...classes) {
 }
 
 export default function ProductDescription({ productSlug }) {
-  const { addItem } = useCart();
+  const { addItem, items } = useCart();
   const { product } = useProduct(productSlug);
   const [variant, setVariant] = useState(product?.product_variants[0]);
   const [colorVariants] = useState(
     product.product_variants.filter((variant) => variant.title === 'color'),
   );
 
+  const isProductAdded = items.filter((item) => item.product_id === product.id).length > 0;
+  
   return (
     <div className="mt-4 bg-white md:mt-4 font-jakarta">
       <div className="max-w-2xl px-4 pt-20 mx-auto sm:px-6 sm:pt-20 lg:max-w-7xl lg:px-8">
@@ -202,13 +204,13 @@ export default function ProductDescription({ productSlug }) {
                 <button
                   className="flex items-center justify-center flex-1 max-w-xs px-8 py-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                   style={{
-                    backgroundImage: product.product_variants_sum_qty
+                    backgroundImage: product.product_variants_sum_qty && !isProductAdded
                       ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
                       : '',
                     backgroundSize: '200% auto',
                     color: 'white',
                     borderRadius: '10px',
-                    backgroundColor: product.product_variants_sum_qty
+                    backgroundColor: product.product_variants_sum_qty && !isProductAdded
                       ? ''
                       : 'gray',
                   }}
@@ -227,7 +229,8 @@ export default function ProductDescription({ productSlug }) {
                       total: variant.qty,
                     });
                   }}
-                  disabled={!product.product_variants_sum_qty}
+                  // or product has already been added to cart
+                  disabled={!product.product_variants_sum_qty || isProductAdded}
                 >
                   Add to bag
                 </button>

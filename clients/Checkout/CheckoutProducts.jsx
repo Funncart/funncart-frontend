@@ -66,7 +66,7 @@ export default function CheckoutProducts(props) {
                       type="number"
                       value={product.quantity}
                       onChange={(e) => {
-                        if (+e.target.value >= product.total) {
+                        if (+e.target.value > product.total) {
                           alert('value exceeded');
                         } else updateItemQuantity(product.id, +e.target.value);
                       }}

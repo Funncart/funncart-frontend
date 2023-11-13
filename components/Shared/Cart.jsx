@@ -105,7 +105,7 @@ export default function Cart(props) {
                                         defaultValue={product.quantity}
                                         onChange={(e) => {
                                           if (
-                                            +e.target.value >= product.total
+                                            +e.target.value > product.total
                                           ) {
                                             alert('value exceeded');
                                             e.target.value = 1;
