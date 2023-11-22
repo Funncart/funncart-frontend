@@ -15,7 +15,7 @@ export default function Product({
         className="relative p-4 border-t border-b border-r border-gray-200 group sm:p-6"
       >
         <div className="relative overflow-hidden bg-gray-200 rounded-lg aspect-h-1 aspect-w-1">
-          {product_variants_sum_qty ? (
+          {+product_variants_sum_qty ? (
             <div className="absolute bottom-0 w-full py-2 text-center text-white bg-green-500 -z-50 group-hover:z-50">
               {product_variants_sum_qty} items in stock
             </div>

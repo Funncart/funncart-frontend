@@ -205,13 +205,13 @@ export default function ProductDescription({ productSlug }) {
                 <button
                   className="flex items-center justify-center flex-1 max-w-xs px-8 py-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                   style={{
-                    backgroundImage: product.product_variants_sum_qty && !isProductAdded
+                    backgroundImage: +product.product_variants_sum_qty && !isProductAdded
                       ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
                       : '',
                     backgroundSize: '200% auto',
                     color: 'white',
                     borderRadius: '10px',
-                    backgroundColor: product.product_variants_sum_qty && !isProductAdded
+                    backgroundColor: +product.product_variants_sum_qty && !isProductAdded
                       ? ''
                       : 'gray',
                   }}
@@ -232,7 +232,7 @@ export default function ProductDescription({ productSlug }) {
                     toast.success('Product added to cart');
                   }}
                   // or product has already been added to cart
-                  disabled={!product.product_variants_sum_qty || isProductAdded}
+                  disabled={!+product.product_variants_sum_qty || isProductAdded}
                 >
                   Add to bag
                 </button>
