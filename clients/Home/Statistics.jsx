@@ -5,16 +5,16 @@ import { Heading } from '@/components/UI';
 
 const STATS = [
   {
-    title: 'Items Sold',
-    value: '300+',
+    title: 'Sellers',
+    value: '5+',
   },
   {
     title: 'Positive Reviews',
-    value: '270+',
+    value: '47+',
   },
   {
-    title: 'Artists Listed',
-    value: '15+',
+    title: 'Items Sold',
+    value: '100+',
   },
   {
     title: 'Complaints',
