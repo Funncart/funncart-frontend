@@ -28,7 +28,7 @@ export default function ProductDescription({ productSlug }) {
           {/* Image gallery */}
           <Tab.Group as="div" className="flex flex-col-reverse">
             {/* Image selector */}
-            <div className="hidden w-full max-w-2xl mx-auto mt-6 sm:block lg:max-w-none">
+            <div className="w-full max-w-2xl mx-auto mt-6 lg:max-w-none">
               <Tab.List className="grid grid-cols-4 gap-6">
                 {variant.media.map((image) => (
                   <Tab
