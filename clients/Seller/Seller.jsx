@@ -22,14 +22,7 @@ const people = [
     linkedinUrl: '#',
     link: 'https://www.funncart.com/sellers/7/products', // Add link for each person
   },
-  {
-    name: 'Moeen Jewellers',
-    role: 'Customised jewellery',
-    imageUrl: '/assets/images/MJ_logo.png',
-    twitterUrl: '#',
-    linkedinUrl: '#',
-    link: 'http://localhost:3000/sellers/9/products', // Add link for each person
-  },
+
   {
     name: 'Shahriyar Amin',
     role: 'Traditional wood work',
@@ -37,6 +30,14 @@ const people = [
     twitterUrl: '#',
     linkedinUrl: '#',
     link: 'https://www.funncart.com/sellers/10/products', // Add link for each person
+  },
+  {
+    name: 'Moeen Jewellers',
+    role: 'Customised jewellery',
+    imageUrl: '/assets/images/MJ_logo.png',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+    link: 'http://localhost:3000/sellers/9/products', // Add link for each person
   },
   // More people...
 ];
