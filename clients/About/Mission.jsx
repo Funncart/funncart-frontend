@@ -30,10 +30,10 @@ export default function Mission() {
           width={500}
           alt="about"
         />
-        <h1 className="text-4xl font-semibold md:text-6xl text-heading">
+        <h1 className="flex flex-wrap items-center justify-center text-5xl font-semibold leading-normal">
           Empowering Pakistani Creators
         </h1>
-        <p className="max-w-4xl text-lg md:text-2xl text-body">
+        <p className="max-w-5xl mx-auto mt-4 text-2xl leading-10 tracking-wide text-gray-500">
           Funncart started when we saw local artists struggling to reach more
           people and boost sales. Our mission? Help artists and art lovers
           connect effortlessly. We&apos;re building a bridge for creativity to

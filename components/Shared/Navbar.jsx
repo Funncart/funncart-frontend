@@ -22,7 +22,7 @@ const NAVBAR_ITEMS = [
     link: '/contact-us',
   },
   {
-    title: 'Become Seller',
+    title: 'Become a Seller',
     link: '/sellers/join',
   },
 ];
@@ -38,7 +38,7 @@ export default function Navbar() {
     setShowItems(false);
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   return (
     <>
       <nav className="md:container md:my-5">
