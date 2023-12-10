@@ -23,12 +23,12 @@ const people = [
     link: 'https://www.funncart.com/sellers/7/products', // Add link for each person
   },
   {
-    name: 'Piedra',
+    name: 'Moeen Jewellers',
     role: 'Customised jewellery',
-    imageUrl: '/assets/images/Piedra_logo.png',
+    imageUrl: '/assets/images/MJ-logo.png',
     twitterUrl: '#',
     linkedinUrl: '#',
-    link: 'https://www.funncart.com/sellers/8/products', // Add link for each person
+    link: 'http://localhost:3000/sellers/9/products', // Add link for each person
   },
   {
     name: 'Shahriyar Amin',
