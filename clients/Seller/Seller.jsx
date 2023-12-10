@@ -25,7 +25,7 @@ const people = [
   {
     name: 'Moeen Jewellers',
     role: 'Customised jewellery',
-    imageUrl: '/assets/images/MJ-logo.png',
+    imageUrl: '/assets/images/MJ_logo.png',
     twitterUrl: '#',
     linkedinUrl: '#',
     link: 'http://localhost:3000/sellers/9/products', // Add link for each person
