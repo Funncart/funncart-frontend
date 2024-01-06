@@ -295,7 +295,7 @@ export default function Seller() {
         <div className="container bg-gray-50 mt-12 pt-8 pb-12 rounded-3xl">
           <div className="mx-auto max-w-6xl ">
             <div className="pt-4 pb-4">
-              <Heading title="FAQs" description="Your Questiosn answered" />{' '}
+              <Heading title="FAQs" description="Your questions answered" />{' '}
             </div>
 
             <dl className=" space-y-8">
