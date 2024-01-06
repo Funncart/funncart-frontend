@@ -19,8 +19,9 @@ export default function ProductDescription({ productSlug }) {
     product.product_variants.filter((variant) => variant.title === 'color'),
   );
 
-  const isProductAdded = items.filter((item) => item.product_id === product.id).length > 0;
-  
+  const isProductAdded =
+    items.filter((item) => item.product_id === product.id).length > 0;
+
   return (
     <div className="mt-4 bg-white md:mt-4 font-jakarta">
       <div className="max-w-2xl px-4 pt-20 mx-auto sm:px-6 sm:pt-20 lg:max-w-7xl lg:px-8">
@@ -90,13 +91,11 @@ export default function ProductDescription({ productSlug }) {
               <h3 className="sr-only">Reviews</h3>
               <div className="flex items-center">
                 <div className="flex items-center">
-                  {[0, 1, 2, 3, 4].map((rating) => (
+                  {[1, 2, 3, 4, 5].map((rating) => (
                     <StarIcon
                       key={rating}
                       className={classNames(
-                        Math.floor(Math.random() * 5 + 3) > rating
-                          ? 'text-yellow-400'
-                          : 'text-gray-300',
+                        'text-yellow-400', // Always apply the filled star color
                         'h-5 w-5 flex-shrink-0',
                       )}
                       aria-hidden="true"
@@ -205,15 +204,17 @@ export default function ProductDescription({ productSlug }) {
                 <button
                   className="flex items-center justify-center flex-1 max-w-xs px-8 py-3 text-base font-medium text-white transition-all duration-500 ease-in-out border border-transparent rounded-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                   style={{
-                    backgroundImage: +product.product_variants_sum_qty && !isProductAdded
-                      ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
-                      : '',
+                    backgroundImage:
+                      +product.product_variants_sum_qty && !isProductAdded
+                        ? 'linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%)'
+                        : '',
                     backgroundSize: '200% auto',
                     color: 'white',
                     borderRadius: '10px',
-                    backgroundColor: +product.product_variants_sum_qty && !isProductAdded
-                      ? ''
-                      : 'gray',
+                    backgroundColor:
+                      +product.product_variants_sum_qty && !isProductAdded
+                        ? ''
+                        : 'gray',
                   }}
                   onMouseEnter={(e) =>
                     (e.target.style.backgroundPosition = 'right center')
@@ -232,7 +233,9 @@ export default function ProductDescription({ productSlug }) {
                     toast.success('Product added to cart');
                   }}
                   // or product has already been added to cart
-                  disabled={!+product.product_variants_sum_qty || isProductAdded}
+                  disabled={
+                    !+product.product_variants_sum_qty || isProductAdded
+                  }
                 >
                   Add to bag
                 </button>
