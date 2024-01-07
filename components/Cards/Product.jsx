@@ -34,7 +34,7 @@ export default function Product({
           <h3 className="text-sm font-medium text-gray-900">{name}</h3>
           <p className="mt-2 text-base font-medium text-gray-900 price">
             {product_variants?.[0]?.price}{" "}/{" "}
-            <span className="text-base font-regular line-through text-gray-900">
+            <span className="text-base font-regular line-through text-gray-500">
               {product_variants?.[0]?.old_price}
             </span>
           </p>          
