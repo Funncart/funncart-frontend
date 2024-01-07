@@ -83,7 +83,7 @@ export default function ProductDescription({ productSlug }) {
               <h2 className="sr-only">Product information</h2>
               <p className="text-2xl font-medium tracking-tight text-gray-900 price">
                 {variant.price}{" "}/{" "}
-                <span className="text-2xl font-normal tracking-tight text-gray-900 line-through">
+                <span className="text-2xl font-normal tracking-tight text-gray-500 line-through">
                   {variant.old_price}
                 </span>
               </p>              
