@@ -1,27 +1,24 @@
 const PEOPLE = [
   {
     name: 'Ahmad Shahbaz',
-    role: 'Founder',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    role: 'Chief Dreamer',
+    imageUrl: '/assets/images/ahmad.jpg',
     twitterUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    name: 'Azam Hayat',
-    role: 'Operations Manager',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    twitterUrl: '#',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/ahmadshahbaz01/',
   },
   {
     name: 'Uzair Hasnain',
-    role: 'Marketing Manager',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    role: 'Creative Magician',
+    imageUrl: '/assets/images/Uzair.jpg',
     twitterUrl: '#',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/uzair-hasnain/',
+  },
+  {
+    name: 'Hashir Akram',
+    role: 'Operations Mastermind',
+    imageUrl: '/assets/images/Hashir.jpg',
+    twitterUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/hashir-akram-9a44b7207/',
   },
 ];
 

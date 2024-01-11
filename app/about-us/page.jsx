@@ -4,7 +4,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Mission />
-      {/* <Team /> */}
+      <Team />
     </>
   );
 }

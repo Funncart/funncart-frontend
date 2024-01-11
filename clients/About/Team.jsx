@@ -7,21 +7,21 @@ export default function Team() {
       <Heading title="Our Team" description="Humans Behind Funncart" />
       <ul
         role="list"
-        className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        className="grid max-w-2xl grid-cols-1 mx-auto gap-x-16 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
       >
         {PEOPLE.map((person) => (
           <li
             key={person.name}
-            className="flex flex-col px-6 py-4 shadow-md rounded-2xl"
+            className="flex flex-col  shadow-md rounded-2xl"
           >
-            <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden">
+            <div className="relative aspect-[3/2] w-full rounded-t-2xl overflow-hidden">
               <img
                 className="object-cover w-full h-full"
                 src={person.imageUrl}
                 alt=""
               />
             </div>
-            <div className="flex flex-col flex-1 mt-4">
+            <div className="flex flex-col flex-1 mt-8 mb-6 mx-8 ">
               <div className="flex justify-between">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
                   {person.name}
@@ -32,7 +32,7 @@ export default function Team() {
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-6 h-7"
                     aria-hidden="true"
                     fill="currentColor"
                     viewBox="0 0 20 20"
