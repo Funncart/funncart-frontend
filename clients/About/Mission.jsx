@@ -3,20 +3,20 @@ import Image from 'next/image';
 
 const STATS = [
   {
-    title: 'Items Sold',
+    title: 'Treasures found new homes',
     value: '300+',
   },
   {
-    title: 'Positive Reviews',
-    value: '270+',
+    title: 'Glowing reviews',
+    value: '47+',
   },
   {
-    title: 'Artists Listed',
-    value: '15+',
+    title: 'Empowered artists',
+    value: '5+',
   },
   {
-    title: 'Complaints',
-    value: '0',
+    title: 'Smiles wihtout complaints',
+    value: '100%',
   },
 ];
 
