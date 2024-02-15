@@ -89,13 +89,13 @@ export default function CheckoutProducts(props) {
           <div className="flex items-center justify-between">
             <dt className="text-sm">Shipping</dt>
             <dd className="text-sm font-medium text-gray-900">
-              Rs. {cartTotal ? shipmentPrice : 0}
+              Rs. {+cartTotal ? +shipmentPrice : 0}
             </dd>
           </div>
           <div className="flex items-center justify-between pt-6 border-t border-gray-200">
             <dt className="text-base font-medium">Total</dt>
             <dd className="text-base font-medium text-gray-900">
-              Rs. {(cartTotal + (cartTotal ? shipmentPrice : 0))?.toFixed(2)}
+              Rs. {(+cartTotal + (+cartTotal ? +shipmentPrice : 0))?.toFixed(2)}
             </dd>
           </div>
         </dl>
