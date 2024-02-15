@@ -44,7 +44,7 @@ export default function CheckoutSection() {
         image: item.media[0].original_url,
       })),
     );
-    saveCartTotal(+cartTotal.toFixed(2));
+    saveCartTotal(+cartTotal?.toFixed(2));
   }, [items, saveCart, saveCartTotal, cartTotal]);
 
   return (
