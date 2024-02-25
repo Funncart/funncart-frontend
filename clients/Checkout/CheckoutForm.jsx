@@ -101,7 +101,7 @@ export default function CheckoutForm({ register, errors }) {
               htmlFor="street"
               className="block text-sm font-medium text-gray-700"
             >
-              Street
+              Address
             </label>
             <div className="mt-1">
               <input
@@ -120,7 +120,7 @@ export default function CheckoutForm({ register, errors }) {
             </div>
           </div>
 
-          <div>
+          <div className="sm:col-span-2">
             <label
               htmlFor="city"
               className="block text-sm font-medium text-gray-700"
@@ -143,7 +143,7 @@ export default function CheckoutForm({ register, errors }) {
               )}
             </div>
           </div>
-
+          {/* 
           <div>
             <label
               htmlFor="state"
@@ -214,7 +214,7 @@ export default function CheckoutForm({ register, errors }) {
                 </p>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -259,11 +259,12 @@ export default function CheckoutForm({ register, errors }) {
           </div>
           {SelectedDeliveryMethod == 'online' && (
             <p className="py-6">
-            <strong>Jazzcash: </strong> 0334-3866227<br/>
-             <strong>Easypaisa: </strong> 0334-3866227<br/>
-             <strong>Allied bank: </strong> 04190010063543230010
+              <strong>Jazzcash: </strong> 0334-3866227
+              <br />
+              <strong>Easypaisa: </strong> 0334-3866227
+              <br />
+              <strong>Allied bank: </strong> 04190010063543230010
             </p>
-
           )}
         </fieldset>
       </div>
