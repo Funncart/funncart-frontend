@@ -18,13 +18,13 @@ export default function OrderSuccess() {
   }, [emptyCart]);
 
   return (
-    <div className='container'>
+    <div className="container">
       <main className="relative mt-16 lg:min-h-full md:mt-24">
-        <div className="overflow-hidden h-80 lg:absolute  rounded-xl lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12">
+        <div className="overflow-hidden h-80 lg:absolute rounded-xl lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12">
           <img
             src="/assets/images/success.jpg"
             alt="TODO"
-            className="object-cover object-center rounded-2xl w-full h-full border-2 border-red-50"
+            className="object-cover object-center w-full h-full border-2 rounded-2xl border-red-50"
           />
         </div>
 
@@ -97,7 +97,9 @@ export default function OrderSuccess() {
               <dl className="pt-6 space-y-6 text-sm font-medium text-gray-500 border-t border-gray-200">
                 <div className="flex justify-between">
                   <dt>Subtotal</dt>
-                  <dd className="text-gray-900">Rs. {cartTotal.toFixed(2)}</dd>
+                  <dd className="text-gray-900">
+                    Rs. {Number(cartTotal).toFixed(2)}
+                  </dd>
                 </div>
 
                 <div className="flex justify-between">
@@ -116,7 +118,10 @@ export default function OrderSuccess() {
                   <dt className="text-base">Total</dt>
                   <dd className="text-base">
                     Rs.{' '}
-                    {(cartTotal + (cartTotal ? shipmentPrice : 0)).toFixed(2)}
+                    {(
+                      Number(cartTotal) +
+                      (Number(cartTotal) ? Number(shipmentPrice) : 0)
+                    ).toFixed(2)}
                   </dd>
                 </div>
               </dl>
@@ -135,13 +140,13 @@ export default function OrderSuccess() {
               </dl>
 
               <div className="py-6 mt-16 text-right border-t border-gray-200">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="text-sm font-medium text-[#fe5900] hover:text-[#ff8f53]"
                 >
                   Continue Shopping
                   <span aria-hidden="true"> &rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
